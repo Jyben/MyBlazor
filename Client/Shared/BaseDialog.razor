@@ -1,0 +1,14 @@
+﻿@using static MyBlazor.Client.Shared.BaseComponent;
+
+<MudDialog>
+    <DialogContent>
+        @ContentMessage
+    </DialogContent>
+    <DialogActions>
+        @if (ButtonTypeDialog == ButtonTypeDialog.TwoButtons)
+        {
+            <MudButton OnClick="Cancel">@SecondaryLabelButton</MudButton>
+        }
+        <MudButton Color="@Color" Variant="Variant.Filled" OnClick="Submit">@MainLabelButton</MudButton>
+    </DialogActions>
+</MudDialog>

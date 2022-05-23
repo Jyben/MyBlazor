@@ -1,0 +1,12 @@
+﻿@inject IDialogService DialogService
+
+@foreach(var alert in _listAlerts)
+{
+    <MudAlert 
+        Class="mb-1" 
+        CloseIconClicked="@(() => RemoveAlert(alert.Key))" 
+        ShowCloseIcon="true" 
+        Severity="alert.Value.Severity" 
+        ContentAlignment="HorizontalAlignment.Center">@alert.Value.Message
+    </MudAlert>    
+}
